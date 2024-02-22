@@ -10,4 +10,9 @@ class CreateStaffSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Staff
         fields = ['f_name','l_name']
+
+class ListAttendanceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Attendance
+        fields = '__all__'
         

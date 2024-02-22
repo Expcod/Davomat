@@ -24,7 +24,7 @@ def list_staff(request):
 @api_view(['POST'])
 def attendance_create(request):
     staff = models.Staff.objects.all()
-    serializer = serializers.ListStaffSerializer(staff, many=True)
+    serializer = serializers.ListAttendanceSerializer(staff, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
